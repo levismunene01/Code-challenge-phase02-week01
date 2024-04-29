@@ -1,0 +1,64 @@
+
+.transaction-form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+
+
+.transaction-form label {
+  
+    margin-bottom: 10px;
+}
+
+.transaction-form input {
+   
+    padding: 8px;
+    margin-bottom: 10px;
+}
+
+.transaction-form button {
+    flex:   100%;
+    padding:10px;
+    margin-left: 600px;
+    margin-right: 900px;
+    background-color: #007bff;
+    color: white;
+    border: 30px;
+    cursor: pointer;
+ 
+}
+
+.transaction-form button:hover {
+    background-color: #0056b3;
+}
+
+
+.search-container {
+    display: flex;
+    justify-content: center;
+    margin:  20px;
+}
+
+.search-input {
+    width: 100%;
+    padding: 10px;
+    margin-right: 10px; 
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+}
+.header {
+    background-color: purple;
+    color: white;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .header h1 {
+    margin: 0;
+  }
+  
