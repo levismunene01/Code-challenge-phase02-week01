@@ -1,19 +1,16 @@
 import React, { useState } from "react";
 
-const TransactionTable = ({ transactions }) => {
-  const [sortBy, setSortBy] = useState(null);
-  const [sortOrder, setSortOrder] = useState("asc");
-
-  const handleSort = (key) => {
+function TransactionTable({ transactions }) {
+  function handleSort(key) {
     if (sortBy === key) {
       setSortOrder(sortOrder === "asc" ? "desc" : "asc");
     } else {
       setSortBy(key);
       setSortOrder("asc");
     }
-  };
+  }
 
-  const sortedTransactions = () => {
+  function sortedTransactions() {
     if (!sortBy) {
       return transactions;
     }
@@ -22,7 +19,11 @@ const TransactionTable = ({ transactions }) => {
       const valueB = typeof b[sortBy] === "string" ? b[sortBy].toLowerCase() : b[sortBy];
       return sortOrder === "asc" ? valueA.localeCompare(valueB) : valueB.localeCompare(valueA);
     });
-  };
+  }
+
+  const [sortBy, setSortBy] = useState(null);
+  
+  const [sortOrder, setSortOrder] = useState("asc");
 
   return (
     <table>
@@ -41,22 +42,21 @@ const TransactionTable = ({ transactions }) => {
       </tbody>
     </table>
   );
-};
+}
 
-const TableHeader = ({ label, onClick }) => {
+function TableHeader({ label, onClick }) {
   return <th onClick={onClick}>{label}</th>;
-};
+}
 
-const TransactionRow = ({ transaction }) => {
+function TransactionRow({ transaction }) {
   return (
-
     <tr>
-      <td> {transaction.date} </td> <td> {transaction.description} </td> <td> {transaction.amount} </td>{" "}
-      <td> {transaction.category} </td>{" "}
-      
+      <td>{transaction.date}</td>
+      <td>{transaction.description}</td>
+      <td>{transaction.amount}</td>
+      <td>{transaction.category}</td>
     </tr>
-
   );
-};
+}
 
 export default TransactionTable;

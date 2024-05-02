@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 
 import Search from './components/search'
 import './App.css'
+
 import AddTransactionForm from './components/AddTransactionForm'
 
 import TransactionTable from './components/TransactionTable'
@@ -14,7 +15,9 @@ const App = () => {
         const [transactions, setTransactions] = useState([
     
             { id: 1, date: '2023-04-27', description: 'Salary', amount: 2000, category: 'Income' },
+
         { id: 2, date: '2022-04-26', description: 'rice', amount: 50, category: 'Food' },
+
         { id: 3, date: '2024-04-25', description: 'Gas bill', amount: 30, category: 'Utilities' },
 
         { id: 4, date: '2024-04-28', description: 'Phone bill', amount: 70, category: 'Utilities' },
